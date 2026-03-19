@@ -2,13 +2,15 @@
 
 A CLI tool and Claude Code skill for rewriting AI-generated text into natural, human-quality writing.
 
+Every LLM reaches for the same words. This removes them.
+
 ---
 
-AI-generated text has a recognizable fingerprint. Not because it's inaccurate — often it isn't — but because it reaches for the same words at rates no human writer reproduces: leverage, tapestry, seamless, nuanced, comprehensive. The same sentence rhythm. Uniform paragraph lengths. Filler constructions like "it is worth noting that" as sentence openers.
+AI-generated text has a recognizable fingerprint. Not because it's wrong — often it isn't — but because every language model reaches for the same vocabulary at rates no human writer reproduces: leverage, tapestry, seamless, nuanced, comprehensive. The same sentence rhythm. Paragraph lengths that never vary. Filler openers like "it is worth noting that."
 
-humanizer-workbench scans for those patterns, then rewrites through a staged pipeline: identify what's AI-like, rewrite for style, refine for rhythm, audit the result. The stages are separate because each requires a different prompt to do its job well.
+humanizer-workbench detects those patterns and rewrites through a staged pipeline: identify what's AI-like, rewrite for style, refine for rhythm, audit the result. The stages are separate because each requires a different prompt to do its job well.
 
-Available as a CLI tool for batch processing and scripts, and as a Claude Code skill for interactive use.
+Use it as a CLI tool for batch processing and scripts, or as a Claude Code skill for interactive rewriting inside Claude Code sessions.
 
 ---
 
@@ -35,7 +37,7 @@ longer. Most documentation failures are about findability, not volume.
 
 ---
 
-## Two interfaces
+## CLI tool and Claude Code skill
 
 | Interface | Use case |
 |-----------|----------|
@@ -65,7 +67,7 @@ cd humanizer-workbench
 pip install -e ".[dev]"
 ```
 
-### Claude Code skill
+### Claude Code skill usage
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -86,7 +88,7 @@ Use humanizer-workbench to rewrite this in a founder voice.
 
 ---
 
-## CLI usage
+## Using the CLI
 
 ```bash
 # Default: professional style, medium intensity
