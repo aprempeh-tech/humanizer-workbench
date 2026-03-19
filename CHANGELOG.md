@@ -7,6 +7,12 @@ This project uses semantic versioning.
 
 ## [Unreleased]
 
+### Added
+
+- `SKILL.md`: Claude Code skill interface for interactive humanization in Claude Code sessions
+- Updated README to document both CLI and Claude Code skill usage
+- `examples/sample_ai_text.txt`: realistic sample for testing the tool
+
 ## [0.1.0] - 2024-01-01
 
 ### Added
